@@ -1,0 +1,33 @@
+[tool.poetry]
+name = "premiership-matches"
+version = "0.1.0"
+description = "Prediction of P'Ship wins."
+authors = ["Szymon Wojciechowski <wlodzio20@gmail.com>"]
+readme = "README.md"
+packages = [{include = "premiership_matches"}]
+
+[tool.poetry.dependencies]
+python = ">=3.9,<3.11"  # requirement of tensorflow
+pandas = "^1.5.0"
+numpy = "^1.23.3"
+scikit-learn = "^1.1.2"
+plotnine = "^0.9.0"
+seaborn = "^0.12.0"
+lightgbm = "^3.3.2"
+matplotlib = "<3.6.0"  # otherwise, error with plotnine
+scikit-optimize = "^0.9.0"
+tensorflow = "^2.10.0"
+
+
+[tool.poetry.group.dev.dependencies]
+jupyterlab = "^3.4.7"
+jupyterlab-code-formatter = "^1.5.3"
+black = "^22.8.0"
+isort = "^5.10.1"
+jupyterlab-spellchecker = "^0.7.2"
+pre-commit = "^2.20.0"
+pandoc = "^2.2"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
